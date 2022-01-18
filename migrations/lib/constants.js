@@ -22,7 +22,7 @@ const airdropTokens = preMinted * weiRate * 5n / 100n;
 const annualMintTarget = preMinted * weiRate * 40n / 100n;
 
 // TeamVestingFactory deployment
-const vestingStart = openingTime;
+const vestingStart = dayjs().add(1, 'd');
 const cliffDuration = dayjs.duration(1, 'm').as('s');
 const vestingDuration = dayjs.duration(52, 'w').as('s');
 const teamAddresses = [
